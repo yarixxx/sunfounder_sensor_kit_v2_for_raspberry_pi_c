@@ -1,9 +1,3 @@
-/*
- *   dht11.c:
- *   Simple test program to test the wiringPi functions
- *   DHT11 test
- */
-
 #include <wiringPi.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,8 +9,7 @@
 
 int dht11_dat[5] = {0,0,0,0,0};
 
-void read_dht11_dat()
-{
+void read_dht11_dat() {
 	uint8_t laststate = HIGH;
 	uint8_t counter = 0;
 	uint8_t j = 0, i;
