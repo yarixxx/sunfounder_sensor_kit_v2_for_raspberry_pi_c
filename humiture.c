@@ -29,12 +29,12 @@ void read_dht11_dat() {
 		}
 		laststate = digitalRead(DHTPIN);
 
+		if (counter == 255) break;
+
 		if ((i >= 4) && (i%2 == 0)) {
-			// dht11_dat[j/8] <<= 1;
-			dht11_dat[j/8] = 0;
-			if (counter > 16) {
+			dht11_dat[j/8] <<= 1;
+			if (counter > 16)
 				dht11_dat[j/8] |= 1;
-            }
 			j++;
 		}
 	}
