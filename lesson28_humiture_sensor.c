@@ -2,7 +2,7 @@
 #include <wiringPi.h>
 #include <stdio.h>
 
-#define DHTPIN B25
+#define DHTPIN B17
 
 void initializeDht() {
     pinMode(DHTPIN, OUTPUT);
