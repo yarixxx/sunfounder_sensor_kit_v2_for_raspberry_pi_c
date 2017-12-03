@@ -14,14 +14,12 @@ void initializeDht() {
 }
 
 void read_dht11_dat() {
-    int dht11_dat[5];
-    dht11_dat[0] = dht11_dat[2] = dht11_dat[4] = 0;
+    int dht11_dat[5] = {0,0,0,0,0};
     int laststate = HIGH;
-	int counter = 0;
     int j = 0;
     int i;
 	for (i=0; i< 85; i++) {
-		counter = 0;
+		int counter = 0;
 		while (digitalRead(DHTPIN) == laststate) {
 			counter++;
 			delayMicroseconds(1);
